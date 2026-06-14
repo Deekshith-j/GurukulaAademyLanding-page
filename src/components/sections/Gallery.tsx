@@ -14,8 +14,13 @@ import e3 from "@/assets/gallery-extra-3.jpeg.asset.json";
 import e4 from "@/assets/gallery-extra-4.jpeg.asset.json";
 import e5 from "@/assets/gallery-extra-5.jpeg.asset.json";
 
-const row1 = [g1.url, e2.url, g2.url, e3.url, g3.url, e1.url, g4.url, e4.url, g5.url, e5.url, g6.url, g7.url, g8.url];
-const row2 = [e5.url, g8.url, e4.url, g6.url, e3.url, g4.url, e2.url, g2.url, e1.url, g7.url, g5.url, g3.url, g1.url];
+// New classroom images
+const n1 = "/gallery/classroom-whiteboard.jpg";
+const n2 = "/gallery/students-writing.jpg";
+const n3 = "/gallery/practice-test-board.jpg";
+
+const row1 = [g1.url, e2.url, n1, g2.url, e3.url, g3.url, n2, e1.url, g4.url, e4.url, g5.url, n3, e5.url, g6.url, g7.url, g8.url];
+const row2 = [e5.url, n3, g8.url, e4.url, g6.url, n1, e3.url, g4.url, e2.url, n2, g2.url, e1.url, g7.url, g5.url, g3.url, g1.url];
 
 type RowHandle = {
   el: HTMLDivElement | null;
