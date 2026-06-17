@@ -99,24 +99,19 @@ function Row({
           className={`flex gap-5 ${speed}`}
         >
           {[0, 1].map((dup) => (
-            <div key={dup} className="flex gap-5 shrink-0 py-4">
+            <div key={dup} className="flex gap-5 shrink-0">
               {images.map((src, i) => (
                 <div
                   key={`${dup}-${i}`}
-                  className="relative group shrink-0 px-2"
+                  className="relative h-48 sm:h-56 md:h-72 w-64 sm:w-80 md:w-[420px] shrink-0 overflow-hidden rounded-2xl bg-soft"
                 >
-                  {/* Blue-Orange Gradient Glow Behind Card */}
-                  <div className="absolute inset-x-4 inset-y-2 -z-10 rounded-2xl bg-gradient-to-r from-sapphire/65 to-coral/65 opacity-70 blur-md transition-all duration-300 group-hover:scale-105 group-hover:opacity-100 group-hover:blur-lg" />
-                  
-                  <div className="relative h-48 sm:h-56 md:h-72 w-64 sm:w-80 md:w-[420px] overflow-hidden rounded-2xl bg-soft border border-border/80 shadow-md">
-                    <img
-                      src={src}
-                      alt=""
-                      className="h-full w-full object-cover pointer-events-none transition-transform duration-500 group-hover:scale-102"
-                      draggable={false}
-                      loading="lazy"
-                    />
-                  </div>
+                  <img
+                    src={src}
+                    alt=""
+                    className="h-full w-full object-cover pointer-events-none"
+                    draggable={false}
+                    loading="lazy"
+                  />
                 </div>
               ))}
             </div>
