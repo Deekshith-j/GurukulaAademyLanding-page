@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import gurukulaLogo from "@/assets/gurukula-logo.asset.json";
 import smartLogo from "@/assets/smart-scholars-logo.asset.json";
 
@@ -15,6 +15,7 @@ const links = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -83,6 +84,38 @@ export function Header() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6 shrink-0">
+          <div
+            className="relative"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <button
+              className="inline-flex items-center gap-1 py-1 text-xs font-semibold tracking-wide text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              Our Academies
+              <ChevronDown size={14} className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {dropdownOpen && (
+              <div className="absolute top-full left-0 mt-1 w-48 rounded-xl border border-border bg-background/95 backdrop-blur-md p-1.5 shadow-lg animate-in fade-in slide-in-from-top-2 duration-150">
+                <Link
+                  to="/gurukula-academy"
+                  className="block px-3.5 py-2 text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+                  onClick={() => setDropdownOpen(false)}
+                >
+                  Gurukula Academy
+                </Link>
+                <Link
+                  to="/smart-scholar-tuition"
+                  className="block px-3.5 py-2 text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+                  onClick={() => setDropdownOpen(false)}
+                >
+                  Smart Scholar Tuition
+                </Link>
+              </div>
+            )}
+          </div>
+
           {links.map((l) => (
             <a
               key={l.label}
@@ -111,6 +144,28 @@ export function Header() {
       {open && (
         <div className="lg:hidden border-t border-border bg-background">
           <div className="container-px mx-auto max-w-7xl py-3 flex flex-col gap-0.5">
+            <div className="border-b border-border/40 pb-2 mb-1">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground/60 px-2 py-1">
+                Our Academies
+              </div>
+              <div className="flex flex-col gap-0.5 pl-2 mt-0.5">
+                <Link
+                  to="/gurukula-academy"
+                  onClick={() => setOpen(false)}
+                  className="text-xs font-semibold text-muted-foreground hover:text-foreground py-2 px-2 rounded-md hover:bg-muted transition-colors"
+                >
+                  Gurukula Academy
+                </Link>
+                <Link
+                  to="/smart-scholar-tuition"
+                  onClick={() => setOpen(false)}
+                  className="text-xs font-semibold text-muted-foreground hover:text-foreground py-2 px-2 rounded-md hover:bg-muted transition-colors"
+                >
+                  Smart Scholar Tuition
+                </Link>
+              </div>
+            </div>
+
             {links.map((l) => (
               <a
                 key={l.label}
@@ -134,4 +189,5 @@ export function Header() {
     </header>
   );
 }
+
 

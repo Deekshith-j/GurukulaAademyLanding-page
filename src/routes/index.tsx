@@ -40,8 +40,34 @@ function Index() {
     }
   }, []);
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "MG Study Centre",
+    "url": "https://mgstudycentre.in",
+    "logo": "https://mgstudycentre.in/__l5e/assets-v1/75fd730d-f55b-44ea-a1f5-3de627cbbd48/gurukula-logo.jpeg",
+    "subOrganization": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Gurukula Academy",
+        "url": "https://mgstudycentre.in/gurukula-academy",
+        "logo": "https://mgstudycentre.in/__l5e/assets-v1/75fd730d-f55b-44ea-a1f5-3de627cbbd48/gurukula-logo.jpeg"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Smart Scholar Tuition",
+        "url": "https://mgstudycentre.in/smart-scholar-tuition",
+        "logo": "https://mgstudycentre.in/__l5e/assets-v1/62076bb2-e77a-438f-9fac-d979eed5799b/smart-scholars-logo.jpeg"
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Splash />
       <Header />
       <Marquee />

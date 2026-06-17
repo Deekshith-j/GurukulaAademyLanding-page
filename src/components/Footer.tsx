@@ -79,8 +79,13 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-14 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs text-white/50">
-          <div>© {new Date().getFullYear()} Gurukula Academy & Smart Scholars Tuitions. All rights reserved.</div>
+        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
+          <div className="flex flex-col gap-1">
+            <div>© {new Date().getFullYear()} Gurukula Academy & Smart Scholars Tuitions. All rights reserved.</div>
+            <div className="text-[10px] text-white/40">
+              MG Study Centre is the proud parent organization of Gurukula Academy and Smart Scholar Tuition.
+            </div>
+          </div>
           <div>Crafted for focus & results.</div>
         </div>
       </div>
