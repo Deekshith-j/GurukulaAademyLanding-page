@@ -7,16 +7,17 @@ import smart from "@/assets/smart-scholars-logo.asset.json";
 export const Route = createFileRoute("/smart-scholar-tuition")({
   head: () => ({
     meta: [
-      { title: "Smart Scholar Tuition | Expert Coaching by MG Study Centre" },
+      { title: "Smart Scholars Tuitions | Smart Scholar Tuition | Expert Coaching by MG Study Centre" },
       {
         name: "description",
         content:
-          "Join Smart Scholar Tuition, a specialized learning initiative by MG Study Centre. Empowering students with personalized tutoring and academic excellence.",
+          "Join Smart Scholars Tuitions (Smart Scholar Tuition), a specialized learning initiative by MG Study Centre. Empowering students of Classes 1st to 10th with personalized tutoring and academic excellence.",
       },
-      { property: "og:title", content: "Smart Scholar Tuition | Expert Coaching by MG Study Centre" },
+      { name: "keywords", content: "Smart Scholars Tuitions, Smart Scholar Tuition, MG Study Centre, tuitions in Sunkadakatte, Class 1 to 10 coaching Bengaluru, private tutor Sunkadakatte, home tutors Bengaluru" },
+      { property: "og:title", content: "Smart Scholars Tuitions | Smart Scholar Tuition | MG Study Centre" },
       {
         property: "og:description",
-        content: "Join Smart Scholar Tuition, a specialized learning initiative by MG Study Centre. Empowering students with personalized tutoring and academic excellence.",
+        content: "Empower your child with Smart Scholars Tuitions (Smart Scholar Tuition) by MG Study Centre. Personalized tutoring and academic excellence for Classes 1 to 10.",
       },
     ],
   }),
@@ -76,6 +77,16 @@ function SmartScholarTuitionPage() {
                 <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-[1.1] tracking-tight">
                   Smart Scholar Tuition
                 </h1>
+                <div className="mt-4 flex justify-center lg:justify-start">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-coral to-navy text-white px-6 py-2.5 text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                  >
+                    <MessageCircle size={15} /> Enquire Now
+                  </a>
+                </div>
                 <p className="mt-4 text-base md:text-xl text-slate-text max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   MG Study Centre — calm, focused learning for Classes 1 to 10.
                 </p>

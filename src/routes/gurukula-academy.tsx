@@ -7,16 +7,17 @@ import gurukula from "@/assets/gurukula-logo.asset.json";
 export const Route = createFileRoute("/gurukula-academy")({
   head: () => ({
     meta: [
-      { title: "Gurukula Academy | Premier Coaching by MG Study Centre" },
+      { title: "Gurukula Academy | Premier Coaching Classes 7th to 10th by MG Study Centre" },
       {
         name: "description",
         content:
-          "Welcome to Gurukula Academy, an exclusive learning program by MG Study Centre. We offer expert coaching and superior educational results. Enroll today.",
+          "Welcome to Gurukula Academy by MG Study Centre. We offer premier coaching and tuitions for Classes 7th, 8th, 9th, and 10th (CBSE, ICSE, State Board) with superior academic results. Enroll today.",
       },
-      { property: "og:title", content: "Gurukula Academy | Premier Coaching by MG Study Centre" },
+      { name: "keywords", content: "Gurukula Academy, MG Study Centre, coaching center Doddabommasandra, Class 7 to 10 tuitions Bengaluru, CBSE tuitions, ICSE coaching, State Board tuitions Bengaluru" },
+      { property: "og:title", content: "Gurukula Academy | Premier Coaching & Tuitions by MG Study Centre" },
       {
         property: "og:description",
-        content: "Welcome to Gurukula Academy, an exclusive learning program by MG Study Centre. We offer expert coaching and superior educational results.",
+        content: "Welcome to Gurukula Academy by MG Study Centre. We offer expert coaching for Classes 7th to 10th across State Board, CBSE & ICSE curricula.",
       },
     ],
   }),
@@ -76,6 +77,16 @@ function GurukulaAcademyPage() {
                 <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-[1.1] tracking-tight">
                   Gurukula Academy
                 </h1>
+                <div className="mt-4 flex justify-center lg:justify-start">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sapphire to-navy text-white px-6 py-2.5 text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                  >
+                    <MessageCircle size={15} /> Enquire Now
+                  </a>
+                </div>
                 <p className="mt-4 text-base md:text-xl text-slate-text max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   Focus, structure & excellence for Classes 7–10.
                 </p>
