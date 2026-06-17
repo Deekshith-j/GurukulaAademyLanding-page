@@ -24,6 +24,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Gurukula Academy | Smart Scholars Tuitions" },
       { property: "og:description", content: "Premium tuitions for Classes 7th–10th — State Board, CBSE, ICSE." },
     ],
+    links: [
+      { rel: "icon", type: "image/jpeg", href: "/__l5e/assets-v1/75fd730d-f55b-44ea-a1f5-3de627cbbd48/gurukula-logo.jpeg" }
+    ],
   }),
   component: Index,
 });

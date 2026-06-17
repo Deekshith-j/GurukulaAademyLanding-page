@@ -20,6 +20,9 @@ export const Route = createFileRoute("/smart-scholar-tuition")({
         content: "Empower your child with Smart Scholars Tuitions (Smart Scholar Tuition) by MG Study Centre. Personalized tutoring and academic excellence for Classes 1 to 10.",
       },
     ],
+    links: [
+      { rel: "icon", type: "image/jpeg", href: "/__l5e/assets-v1/62076bb2-e77a-438f-9fac-d979eed5799b/smart-scholars-logo.jpeg" }
+    ],
   }),
   component: SmartScholarTuitionPage,
 });

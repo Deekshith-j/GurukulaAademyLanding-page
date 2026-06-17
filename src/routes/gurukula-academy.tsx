@@ -20,6 +20,9 @@ export const Route = createFileRoute("/gurukula-academy")({
         content: "Welcome to Gurukula Academy by MG Study Centre. We offer expert coaching for Classes 7th to 10th across State Board, CBSE & ICSE curricula.",
       },
     ],
+    links: [
+      { rel: "icon", type: "image/jpeg", href: "/__l5e/assets-v1/75fd730d-f55b-44ea-a1f5-3de627cbbd48/gurukula-logo.jpeg" }
+    ],
   }),
   component: GurukulaAcademyPage,
 });
