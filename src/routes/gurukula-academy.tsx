@@ -124,13 +124,13 @@ function GurukulaAcademyPage() {
         {/* Facilities + Map Info */}
         <section className="container-px mx-auto max-w-7xl py-14 md:py-24 grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6 space-y-10">
-            {/* About Our Gurukula Program */}
+            {/* Gurukula Academy Class Details */}
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl font-bold text-navy">
-                About Our Gurukula Program.
+                Gurukula Academy Class Details
               </h2>
               <p className="text-slate-text leading-relaxed text-sm md:text-base">
-                Welcome to Gurukula Academy, an exclusive learning program by MG Study Centre. We offer expert coaching and superior educational results. Our teaching framework ensures daily homework review and rigorous practice sessions designed for high-level outcomes.
+                Join Gurukula Academy, a specialized learning initiative by MG Study Centre. Empowering students with premium coaching and disciplined learning to achieve superior results. We focus on conceptual depth and structured study schedules.
               </p>
             </div>
 
