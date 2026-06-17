@@ -73,9 +73,6 @@ function GurukulaAcademyPage() {
 
             <div className="mt-8 flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8">
               <div className="order-2 lg:order-1 flex-1 text-center lg:text-left">
-                <span className="text-xs uppercase tracking-[0.3em] text-sapphire font-semibold">
-                  Branch Page
-                </span>
                 <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-[1.1] tracking-tight">
                   Gurukula Academy
                 </h1>
