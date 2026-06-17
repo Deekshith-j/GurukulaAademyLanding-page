@@ -7,17 +7,17 @@ import smart from "@/assets/smart-scholars-logo.asset.json";
 export const Route = createFileRoute("/smart-scholar-tuition")({
   head: () => ({
     meta: [
-      { title: "Smart Scholars Tuitions | Smart Scholar Tuition | Expert Coaching by MG Study Centre" },
+      { title: "Smart Scholars Tuitions | Smart Scholars Tuition | Expert Coaching by MG Study Centre" },
       {
         name: "description",
         content:
-          "Join Smart Scholars Tuitions (Smart Scholar Tuition), a specialized learning initiative by MG Study Centre. Empowering students of Classes 1st to 10th with personalized tutoring and academic excellence.",
+          "Join Smart Scholars Tuitions (Smart Scholars Tuition), a specialized learning initiative by MG Study Centre. Empowering students of Classes 1st to 10th with personalized tutoring and academic excellence.",
       },
-      { name: "keywords", content: "Smart Scholars Tuitions, Smart Scholar Tuition, MG Study Centre, tuitions in Sunkadakatte, Class 1 to 10 coaching Bengaluru, private tutor Sunkadakatte, home tutors Bengaluru" },
-      { property: "og:title", content: "Smart Scholars Tuitions | Smart Scholar Tuition | MG Study Centre" },
+      { name: "keywords", content: "Smart Scholars Tuitions, Smart Scholars Tuition, MG Study Centre, tuitions in Sunkadakatte, Class 1 to 10 coaching Bengaluru, private tutor Sunkadakatte, home tutors Bengaluru" },
+      { property: "og:title", content: "Smart Scholars Tuitions | Smart Scholars Tuition | MG Study Centre" },
       {
         property: "og:description",
-        content: "Empower your child with Smart Scholars Tuitions (Smart Scholar Tuition) by MG Study Centre. Personalized tutoring and academic excellence for Classes 1 to 10.",
+        content: "Empower your child with Smart Scholars Tuitions (Smart Scholars Tuition) by MG Study Centre. Personalized tutoring and academic excellence for Classes 1 to 10.",
       },
     ],
     links: [
@@ -41,12 +41,12 @@ function SmartScholarTuitionPage() {
     "Mock exams & quarterly parent meetings",
   ];
 
-  const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Smart Scholar Tuition, I'd like to enquire about admission.`)}`;
+  const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Smart Scholars Tuition, I'd like to enquire about admission.`)}`;
 
   const schema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Smart Scholar Tuition",
+    "name": "Smart Scholars Tuition",
     "url": "https://mgstudycentre.in/smart-scholar-tuition",
     "logo": "https://mgstudycentre.in/__l5e/assets-v1/62076bb2-e77a-438f-9fac-d979eed5799b/smart-scholars-logo.jpeg",
     "parentOrganization": {
@@ -78,7 +78,7 @@ function SmartScholarTuitionPage() {
             <div className="mt-8 flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8">
               <div className="order-2 lg:order-1 flex-1 text-center lg:text-left">
                 <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-[1.1] tracking-tight">
-                  Smart Scholar Tuition
+                  Smart Scholars Tuition
                 </h1>
                 <p className="mt-4 text-base md:text-xl text-slate-text max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   MG Study Centre — calm, focused learning for Classes 1 to 10.
@@ -88,7 +88,7 @@ function SmartScholarTuitionPage() {
                     href={facebookUrl}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Smart Scholar Tuition on Facebook"
+                    aria-label="Smart Scholars Tuition on Facebook"
                     className="inline-flex h-10 w-10 rounded-full border border-border bg-background items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors"
                   >
                     <Facebook size={16} />
@@ -97,7 +97,7 @@ function SmartScholarTuitionPage() {
                     href={instagramUrl}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Smart Scholar Tuition on Instagram"
+                    aria-label="Smart Scholars Tuition on Instagram"
                     className="inline-flex h-10 w-10 rounded-full border border-border bg-background items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors"
                   >
                     <Instagram size={16} />
@@ -117,7 +117,7 @@ function SmartScholarTuitionPage() {
 
               <div className="order-1 lg:order-2 shrink-0 flex justify-center">
                 <div className="h-24 w-24 md:h-32 md:w-32 rounded-2xl bg-background border border-coral/30 shadow-lg flex items-center justify-center overflow-hidden p-2">
-                  <img src={smart.url} alt="Smart Scholar Tuition Logo" className="h-full w-full object-contain" />
+                  <img src={smart.url} alt="Smart Scholars Tuition Logo" className="h-full w-full object-contain" />
                 </div>
               </div>
             </div>
@@ -125,24 +125,24 @@ function SmartScholarTuitionPage() {
         </section>
 
         {/* Facilities + Map Info */}
-        <section className="container-px mx-auto max-w-7xl py-14 md:py-24 grid lg:grid-cols-12 gap-10">
+        <section className="container-px mx-auto max-w-7xl py-14 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6 space-y-10">
-            {/* Smart Scholar Class Details */}
+            {/* Smart Scholars Class Details */}
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl font-bold text-navy">
-                Smart Scholar Class Details
+                Smart Scholars Class Details
               </h2>
               <p className="text-slate-text leading-relaxed text-sm md:text-base">
-                Join Smart Scholar Tuition, a specialized learning initiative by MG Study Centre. Empowering students with personalized tutoring and academic excellence. We focus on low student-to-teacher ratios to support interactive, structured study schedules.
+                Join Smart Scholars Tuition, a specialized learning initiative by MG Study Centre. Empowering students with personalized tutoring and academic excellence. We focus on low student-to-teacher ratios to support interactive, structured study schedules.
               </p>
             </div>
 
-            {/* Benefits of Smart Scholar Tuition */}
+            {/* Benefits of Smart Scholars Tuition */}
             <div className="space-y-6">
               <h2 className="text-2xl sm:text-3xl font-bold text-navy">
-                Benefits of Smart Scholar Tuition
+                Benefits of Smart Scholars Tuition
               </h2>
-              <ul className="grid sm:grid-cols-2 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {facilities.map((f, i) => (
                   <li
                     key={i}
@@ -159,7 +159,7 @@ function SmartScholarTuitionPage() {
 
             {/* Contact Card */}
             <div className="relative overflow-hidden rounded-2xl border border-coral/30 p-5 md:p-6 bg-background before:absolute before:right-0 before:bottom-0 before:h-40 before:w-40 before:pointer-events-none before:bg-[radial-gradient(circle_at_bottom_right,rgba(255,137,77,0.2),transparent_60%)]">
-              <div className="relative z-10 grid sm:grid-cols-2 gap-5 text-left">
+              <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
                 <div>
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">Address</div>
                   <div className="mt-2 flex gap-2 text-navy font-medium text-sm md:text-base break-words">
@@ -182,7 +182,7 @@ function SmartScholarTuitionPage() {
           <div className="lg:col-span-6 h-full flex flex-col justify-stretch">
             <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[320px] lg:min-h-[480px] rounded-3xl overflow-hidden border border-coral/30 shadow-lg flex-1">
               <iframe
-                title="Smart Scholar Tuition map"
+                title="Smart Scholars Tuition map"
                 src="https://www.google.com/maps?q=12.9960378,77.4999583&z=16&output=embed"
                 className="h-full w-full border-0"
                 loading="lazy"

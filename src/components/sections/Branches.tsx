@@ -19,7 +19,7 @@ const branches = [
   {
     slug: "smart-scholar-tuition",
     to: "/smart-scholar-tuition",
-    name: "Smart Scholar Tuition",
+    name: "Smart Scholars Tuition",
     tag: "Branch Two",
     desc: "MG Study Centre — calm, disciplined tuitions for Classes 1 to 10.",
     address: "Main Road, Neelgiri Topu, Vigneshwara Nagar, Madeshwara Extension, Sunkadakatte, Bengaluru, Karnataka 560091 · Classes 1–10",

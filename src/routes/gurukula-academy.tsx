@@ -125,7 +125,7 @@ function GurukulaAcademyPage() {
         </section>
 
         {/* Facilities + Map Info */}
-        <section className="container-px mx-auto max-w-7xl py-14 md:py-24 grid lg:grid-cols-12 gap-10">
+        <section className="container-px mx-auto max-w-7xl py-14 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-6 space-y-10">
             {/* Gurukula Academy Class Details */}
             <div className="space-y-4">
@@ -142,7 +142,7 @@ function GurukulaAcademyPage() {
               <h2 className="text-2xl sm:text-3xl font-bold text-navy">
                 Why Choose Gurukula Academy?
               </h2>
-              <ul className="grid sm:grid-cols-2 gap-4">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {facilities.map((f, i) => (
                   <li
                     key={i}
@@ -159,7 +159,7 @@ function GurukulaAcademyPage() {
 
             {/* Contact Card */}
             <div className="relative overflow-hidden rounded-2xl border border-sapphire/25 p-5 md:p-6 bg-background before:absolute before:right-0 before:bottom-0 before:h-40 before:w-40 before:pointer-events-none before:bg-[radial-gradient(circle_at_bottom_right,rgba(75,124,214,0.2),transparent_60%)]">
-              <div className="relative z-10 grid sm:grid-cols-2 gap-5 text-left">
+              <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
                 <div>
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">Address</div>
                   <div className="mt-2 flex gap-2 text-navy font-medium text-sm md:text-base break-words">

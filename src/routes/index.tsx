@@ -58,7 +58,7 @@ function Index() {
       },
       {
         "@type": "EducationalOrganization",
-        "name": "Smart Scholar Tuition",
+        "name": "Smart Scholars Tuition",
         "url": "https://mgstudycentre.in/smart-scholar-tuition",
         "logo": "https://mgstudycentre.in/__l5e/assets-v1/62076bb2-e77a-438f-9fac-d979eed5799b/smart-scholars-logo.jpeg"
       }
