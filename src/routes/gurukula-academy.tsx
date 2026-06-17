@@ -77,16 +77,6 @@ function GurukulaAcademyPage() {
                 <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-[1.1] tracking-tight">
                   Gurukula Academy
                 </h1>
-                <div className="mt-4 flex justify-center lg:justify-start">
-                  <a
-                    href={waUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sapphire to-navy text-white px-6 py-2.5 text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
-                  >
-                    <MessageCircle size={15} /> Enquire Now
-                  </a>
-                </div>
                 <p className="mt-4 text-base md:text-xl text-slate-text max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                   Focus, structure & excellence for Classes 7–10.
                 </p>
@@ -108,6 +98,16 @@ function GurukulaAcademyPage() {
                     className="inline-flex h-10 w-10 rounded-full border border-border bg-background items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors"
                   >
                     <Instagram size={16} />
+                  </a>
+                </div>
+                <div className="mt-6 flex justify-center lg:justify-start">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sapphire to-navy text-white px-6 py-2.5 text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                  >
+                    <MessageCircle size={15} /> Enquire Now
                   </a>
                 </div>
               </div>
