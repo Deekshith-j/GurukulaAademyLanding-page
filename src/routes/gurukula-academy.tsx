@@ -133,7 +133,7 @@ function GurukulaAcademyPage() {
                 Gurukula Academy Class Details
               </h2>
               <p className="text-slate-text leading-relaxed text-sm md:text-base">
-                Join Gurukula Academy, a specialized learning initiative by MG Study Centre. Empowering students with premium coaching and disciplined learning to achieve superior results. We focus on conceptual depth and structured study schedules.
+                Join Gurukula Academy, a specialized learning initiative by MG Study Centre. Empowering students with disciplined learning to achieve superior results. We focus on conceptual depth and structured study schedules.
               </p>
             </div>
 
