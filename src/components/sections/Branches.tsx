@@ -7,6 +7,7 @@ import smart from "@/assets/smart-scholars-logo.asset.json";
 const branches = [
   {
     slug: "gurukula-academy",
+    to: "/gurukula-academy",
     name: "Gurukula Academy",
     tag: "Branch One",
     desc: "Focused, structured tuitions built for excellence.",
@@ -16,8 +17,9 @@ const branches = [
     cornerClass: "before:bg-[radial-gradient(circle_at_top_left,rgba(75,124,214,0.24),transparent_58%)] after:bg-[radial-gradient(circle_at_bottom_right,rgba(75,124,214,0.18),transparent_56%)]",
   },
   {
-    slug: "smart-scholars",
-    name: "Smart Scholars Tuitions",
+    slug: "smart-scholar-tuition",
+    to: "/smart-scholar-tuition",
+    name: "Smart Scholar Tuition",
     tag: "Branch Two",
     desc: "MG Study Centre — calm, disciplined tuitions for Classes 1 to 10.",
     address: "Main Road, Neelgiri Topu, Vigneshwara Nagar, Madeshwara Extension, Sunkadakatte, Bengaluru, Karnataka 560091 · Classes 1–10",
@@ -65,8 +67,7 @@ export function Branches() {
               </div>
               <div className="relative z-10 mt-10 flex items-center justify-between">
                 <Link
-                  to="/branches/$slug"
-                  params={{ slug: b.slug }}
+                  to={b.to}
                   className="inline-flex items-center gap-2 rounded-full bg-navy text-primary-foreground px-5 py-2.5 text-sm font-semibold hover:bg-sapphire transition-colors"
                 >
                   View details

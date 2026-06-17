@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, MapPin, Phone, MessageCircle, Facebook, Instagram, ShieldCheck, Award, Users, BookOpen } from "lucide-react";
+import { ArrowLeft, MapPin, Phone, MessageCircle, Facebook, Instagram } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import smart from "@/assets/smart-scholars-logo.asset.json";
@@ -24,14 +24,20 @@ export const Route = createFileRoute("/smart-scholar-tuition")({
 });
 
 function SmartScholarTuitionPage() {
-  const waUrl = `https://wa.me/917019140957?text=${encodeURIComponent(`Hello Smart Scholar Tuition, I'd like to enquire about admission.`)}`;
+  const whatsappNumber = "917019140957";
+  const address = "Main Road, Neelgiri Topu, Vigneshwara Nagar, Madeshwara Extension, Sunkadakatte, Bengaluru, Karnataka 560091 · Classes 1–10";
+  const phoneNumber = "+91 70191 40957";
+  const facebookUrl = "https://www.facebook.com/people/smart-scholars-tuition/61590648988220/";
+  const instagramUrl = "https://www.instagram.com/smart_scholarstuitions?utm_source=qr&igsh=ZnMxbW41dHg4Z210";
 
-  const benefits = [
-    { title: "Personal Mentor Support", desc: "Every student gets paired with a personal mentor to monitor progress and build skills." },
-    { title: "Comprehensive Coverage", desc: "Dedicated tuitions for Classes 1 to 10 across all core subjects and curricula." },
-    { title: "Mock Tests & Reports", desc: "Periodic examinations and parent-teacher meetings to assess student progress." },
-    { title: "Calm, Focused Environment", desc: "Quiet study zones designed to keep distractions minimal and focus maximum." },
+  const facilities = [
+    "Tuitions for Classes 1 to 10 — all subjects",
+    "Personal mentor for every student",
+    "Daily home-work review",
+    "Mock exams & quarterly parent meetings",
   ];
+
+  const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Smart Scholar Tuition, I'd like to enquire about admission.`)}`;
 
   const schema = {
     "@context": "https://schema.org",
@@ -54,9 +60,8 @@ function SmartScholarTuitionPage() {
       />
       <Header />
       <main className="bg-background overflow-x-hidden min-h-screen">
-        {/* Hero Banner */}
-        <section className="relative overflow-hidden bg-soft border-b border-border py-16 md:py-24 lg:py-32">
-          {/* Radial Gradient overlay */}
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-soft border-b border-border py-10 md:py-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,137,77,0.18),transparent_55%)] pointer-events-none" />
           <div className="container-px mx-auto max-w-7xl relative z-10">
             <Link
@@ -66,133 +71,127 @@ function SmartScholarTuitionPage() {
               <ArrowLeft size={14} /> Back to home
             </Link>
 
-            <div className="mt-8 grid lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-8">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-coral/10 text-coral text-xs font-semibold tracking-wider uppercase">
-                  A specialized learning program by MG Study Centre
+            <div className="mt-8 flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8">
+              <div className="order-2 lg:order-1 flex-1 text-center lg:text-left">
+                <span className="text-xs uppercase tracking-[0.3em] text-coral font-semibold">
+                  Branch Page
                 </span>
-                <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-navy leading-[1.1] tracking-tight">
+                <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl font-bold text-navy leading-[1.1] tracking-tight">
                   Smart Scholar Tuition
                 </h1>
-                <p className="mt-6 text-lg md:text-xl text-slate-text max-w-2xl leading-relaxed">
-                  Personalized attention, calm study environments, and structured mentorship for students from Class 1st to 10th.
+                <p className="mt-4 text-base md:text-xl text-slate-text max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                  MG Study Centre — calm, focused learning for Classes 1 to 10.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-4">
+                <div className="mt-6 flex items-center justify-center lg:justify-start gap-3">
                   <a
-                    href={waUrl}
+                    href={facebookUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-coral to-navy text-white px-7 py-3.5 text-sm font-semibold shadow-lg hover:shadow-xl transition-all"
+                    aria-label="Smart Scholar Tuition on Facebook"
+                    className="inline-flex h-10 w-10 rounded-full border border-border bg-background items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors"
                   >
-                    <MessageCircle size={16} /> Enroll Today
+                    <Facebook size={16} />
                   </a>
                   <a
-                    href="tel:+917019140957"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background text-navy px-7 py-3.5 text-sm font-semibold hover:bg-soft transition-all"
+                    href={instagramUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Smart Scholar Tuition on Instagram"
+                    className="inline-flex h-10 w-10 rounded-full border border-border bg-background items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors"
                   >
-                    <Phone size={16} /> Contact Us
+                    <Instagram size={16} />
                   </a>
                 </div>
               </div>
 
-              <div className="lg:col-span-4 flex lg:justify-end">
-                <div className="relative group">
-                  <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-coral to-navy opacity-30 blur transition duration-1000 group-hover:opacity-40" />
-                  <div className="relative h-44 w-44 md:h-56 md:w-56 rounded-2xl bg-background border border-coral/20 shadow-xl flex items-center justify-center overflow-hidden p-4">
-                    <img
-                      src={smart.url}
-                      alt="Smart Scholar Tuition logo"
-                      className="h-full w-full object-contain"
-                    />
-                  </div>
+              <div className="order-1 lg:order-2 shrink-0 flex justify-center">
+                <div className="h-24 w-24 md:h-32 md:w-32 rounded-2xl bg-background border border-coral/30 shadow-lg flex items-center justify-center overflow-hidden p-2">
+                  <img src={smart.url} alt="Smart Scholar Tuition Logo" className="h-full w-full object-contain" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Content Section: H2s: Smart Scholar Class Details & Benefits of Smart Scholar Tuition */}
-        <section className="container-px mx-auto max-w-7xl py-16 md:py-24">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-            
-            {/* Left side: Smart Scholar Class Details */}
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs uppercase tracking-[0.25em] text-coral font-bold">
-                Program Structure
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy leading-tight">
+        {/* Facilities + Map Info */}
+        <section className="container-px mx-auto max-w-7xl py-14 md:py-24 grid lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-6 space-y-10">
+            {/* Smart Scholar Class Details */}
+            <div className="space-y-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy">
                 Smart Scholar Class Details
               </h2>
-              <p className="text-slate-text leading-relaxed">
-                Smart Scholar Tuition is built around individualized support. We acknowledge that every child has a unique pace of learning, which is why we pair students with dedicated mentors who track their progress daily.
+              <p className="text-slate-text leading-relaxed text-sm md:text-base">
+                Join Smart Scholar Tuition, a specialized learning initiative by MG Study Centre. Empowering students with personalized tutoring and academic excellence. We focus on low student-to-teacher ratios to support interactive, structured study schedules.
               </p>
-              <p className="text-slate-text leading-relaxed">
-                We offer classes from 1st standard to 10th standard for all core subjects under State, CBSE, and ICSE syllabus boards. We focus heavily on clear concept building, homework monitoring, and mock tests.
-              </p>
-
-              {/* Address card */}
-              <div className="p-6 rounded-2xl border border-border bg-soft/60 space-y-4 mt-8">
-                <h3 className="font-semibold text-navy">Branch Details</h3>
-                <div className="flex gap-3 text-slate-text text-sm">
-                  <MapPin size={16} className="text-coral shrink-0 mt-0.5" />
-                  <span>Main Road, Neelgiri Topu, Vigneshwara Nagar, Madeshwara Extension, Sunkadakatte, Bengaluru, Karnataka 560091</span>
-                </div>
-                <div className="flex gap-3 text-slate-text text-sm">
-                  <Phone size={16} className="text-coral shrink-0 mt-0.5" />
-                  <a href="tel:+917019140957" className="hover:underline">+91 70191 40957</a>
-                </div>
-              </div>
             </div>
 
-            {/* Right side: Benefits of Smart Scholar Tuition */}
-            <div className="lg:col-span-6 space-y-8">
-              <div className="space-y-3">
-                <span className="text-xs uppercase tracking-[0.25em] text-coral font-bold">
-                  Core Advantages
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-navy leading-tight">
-                  Benefits of Smart Scholar Tuition
-                </h2>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-6">
-                {benefits.map((b, idx) => (
-                  <div key={idx} className="p-5 rounded-2xl border border-border bg-background shadow-sm space-y-3 hover:border-coral/40 transition-colors">
-                    <div className="h-10 w-10 rounded-xl bg-coral/5 text-coral flex items-center justify-center font-bold text-sm">
-                      0{idx + 1}
+            {/* Benefits of Smart Scholar Tuition */}
+            <div className="space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy">
+                Benefits of Smart Scholar Tuition
+              </h2>
+              <ul className="grid sm:grid-cols-2 gap-4">
+                {facilities.map((f, i) => (
+                  <li
+                    key={i}
+                    className="group relative overflow-hidden rounded-2xl border border-coral/30 bg-background p-5 transition-all hover:-translate-y-0.5 hover:shadow-md before:absolute before:left-0 before:top-0 before:h-24 before:w-24 before:pointer-events-none before:bg-[radial-gradient(circle_at_top_left,rgba(255,137,77,0.22),transparent_65%)]"
+                  >
+                    <div className="relative z-10 text-xs font-semibold text-coral">0{i + 1}</div>
+                    <div className="relative z-10 mt-2 text-slate-text leading-relaxed text-sm md:text-base">
+                      {f}
                     </div>
-                    <h3 className="font-bold text-navy text-base">{b.title}</h3>
-                    <p className="text-slate-text text-xs leading-relaxed">{b.desc}</p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
 
+            {/* Contact Card */}
+            <div className="relative overflow-hidden rounded-2xl border border-coral/30 p-5 md:p-6 bg-background before:absolute before:right-0 before:bottom-0 before:h-40 before:w-40 before:pointer-events-none before:bg-[radial-gradient(circle_at_bottom_right,rgba(255,137,77,0.2),transparent_60%)]">
+              <div className="relative z-10 grid sm:grid-cols-2 gap-5 text-left">
+                <div>
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">Address</div>
+                  <div className="mt-2 flex gap-2 text-navy font-medium text-sm md:text-base break-words">
+                    <MapPin size={16} className="text-coral shrink-0 mt-0.5" />
+                    <span className="flex-1">{address}</span>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">Phone</div>
+                  <div className="mt-2 flex gap-2 text-navy font-medium text-sm md:text-base">
+                    <Phone size={16} className="text-coral shrink-0 mt-0.5" />
+                    <a href={`tel:${phoneNumber.replace(/\s/g, "")}`} className="hover:underline">{phoneNumber}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
 
-        {/* CTA section */}
-        <section className="bg-navy text-white py-16 md:py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,137,77,0.15),transparent_60%)] pointer-events-none" />
-          <div className="container-px mx-auto max-w-5xl text-center relative z-10 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to Start Learning Smartly?</h2>
-            <p className="text-white/70 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
-              Unlock your true learning potential with personalized tutoring. Connect with our advisors to enroll.
-            </p>
-            <div className="pt-4">
-              <a
-                href={waUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white text-navy px-8 py-4 text-sm font-semibold hover:bg-white/90 shadow-lg hover:shadow-xl transition-all"
-              >
-                <MessageCircle size={16} /> Contact Advisor via WhatsApp
-              </a>
+          {/* Map Column */}
+          <div className="lg:col-span-6 h-full flex flex-col justify-stretch">
+            <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full min-h-[320px] lg:min-h-[480px] rounded-3xl overflow-hidden border border-coral/30 shadow-lg flex-1">
+              <iframe
+                title="Smart Scholar Tuition map"
+                src="https://www.google.com/maps?q=12.9960378,77.4999583&z=16&output=embed"
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </section>
       </main>
       <Footer />
+
+      {/* Sticky WhatsApp */}
+      <a
+        href={waUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-4 md:bottom-8 md:right-8 z-40 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-5 py-3.5 text-sm font-semibold shadow-lg shadow-[#25D366]/30 hover:bg-[#1ebe5b] transition-colors"
+      >
+        <MessageCircle size={16} /> Chat on WhatsApp
+      </a>
     </>
   );
 }

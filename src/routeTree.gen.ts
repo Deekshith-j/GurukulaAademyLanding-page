@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SmartScholarTuitionRouteImport } from './routes/smart-scholar-tuition'
 import { Route as GurukulaAcademyRouteImport } from './routes/gurukula-academy'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BranchesSlugRouteImport } from './routes/branches.$slug'
 
 const SmartScholarTuitionRoute = SmartScholarTuitionRouteImport.update({
   id: '/smart-scholar-tuition',
@@ -29,53 +28,35 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BranchesSlugRoute = BranchesSlugRouteImport.update({
-  id: '/branches/$slug',
-  path: '/branches/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/gurukula-academy': typeof GurukulaAcademyRoute
   '/smart-scholar-tuition': typeof SmartScholarTuitionRoute
-  '/branches/$slug': typeof BranchesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/gurukula-academy': typeof GurukulaAcademyRoute
   '/smart-scholar-tuition': typeof SmartScholarTuitionRoute
-  '/branches/$slug': typeof BranchesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/gurukula-academy': typeof GurukulaAcademyRoute
   '/smart-scholar-tuition': typeof SmartScholarTuitionRoute
-  '/branches/$slug': typeof BranchesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/gurukula-academy'
-    | '/smart-scholar-tuition'
-    | '/branches/$slug'
+  fullPaths: '/' | '/gurukula-academy' | '/smart-scholar-tuition'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/gurukula-academy' | '/smart-scholar-tuition' | '/branches/$slug'
-  id:
-    | '__root__'
-    | '/'
-    | '/gurukula-academy'
-    | '/smart-scholar-tuition'
-    | '/branches/$slug'
+  to: '/' | '/gurukula-academy' | '/smart-scholar-tuition'
+  id: '__root__' | '/' | '/gurukula-academy' | '/smart-scholar-tuition'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GurukulaAcademyRoute: typeof GurukulaAcademyRoute
   SmartScholarTuitionRoute: typeof SmartScholarTuitionRoute
-  BranchesSlugRoute: typeof BranchesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -101,13 +82,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/branches/$slug': {
-      id: '/branches/$slug'
-      path: '/branches/$slug'
-      fullPath: '/branches/$slug'
-      preLoaderRoute: typeof BranchesSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -115,7 +89,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GurukulaAcademyRoute: GurukulaAcademyRoute,
   SmartScholarTuitionRoute: SmartScholarTuitionRoute,
-  BranchesSlugRoute: BranchesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
