@@ -83,7 +83,7 @@ export function Footer() {
           <div className="flex flex-col gap-1">
             <div>© {new Date().getFullYear()} Gurukula Academy & Smart Scholars Tuitions. All rights reserved.</div>
             <div className="text-[10px] text-white/40">
-              MG Study Centre is the proud parent organization of Gurukula Academy and Smart Scholar Tuition.
+              Gurukula Academy and Smart Scholar Tuition are initiatives of MG Study Centre.
             </div>
           </div>
           <div>Crafted for focus & results.</div>
