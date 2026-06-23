@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mgstudycentre.in/sitemap.xml
+Sitemap: https://www.mgstudycentre.in/sitemap.xml
